@@ -1,0 +1,122 @@
+header {
+  border-bottom: 1px solid #eeeeee;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.nav-bar__logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  color: #000000;
+  line-height: 31px;
+}
+.nav-bar__logo span {
+  color: var(--color-accent);
+}
+.nav-bar__menu {
+  display: flex;
+  margin-left: 93px;
+}
+
+.nav-bar__item {
+  position: relative;
+}
+
+.nav-bar__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-bar__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--color-main);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+
+  transition: color 250ms var(--animation-cubic);
+}
+.nav-bar__link--active::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-accent);
+}
+
+.nav-bar__link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-accent);
+
+  transform: scaleX(0);
+  transition: transform 250ms var(--animation-cubic);
+}
+
+.nav-bar__link:hover,
+.nav-bar__link:focus {
+  color: var(--color-accent);
+}
+
+.nav-bar__link:hover::after,
+.nav-bar__link:focus::after {
+  transform: scaleX(1);
+}
+
+.cont-menu {
+  display: flex;
+  margin-left: auto;
+}
+
+.cont-menu__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.cont-menu__icon--mail {
+  max-width: 16px;
+  max-height: 12px;
+}
+.cont-menu__icon--phone {
+  max-width: 10px;
+  max-height: 16px;
+}
+.cont-menu__item:not(:last-child) {
+  margin-right: 30px;
+}
+.cont-menu__link {
+  display: flex;
+  align-items: center;
+
+  color: var(--color-alt);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+
+  transition: color 250ms var(--animation-cubic);
+}
+.cont-menu__link:hover,
+.cont-menu__link:focus {
+  color: var(--color-accent);
+}
