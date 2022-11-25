@@ -9,9 +9,9 @@
 }
 .about__banner {
   position: relative;
-}
-.about__banner:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .about__title {
   margin-bottom: 50px;

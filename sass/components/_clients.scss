@@ -25,11 +25,12 @@
   background-color: #fff;
 
   transition: fill 250ms var(--animation-cubic), background-color 250ms var(--animation-cubic);
-}
-.clients__link:hover,
-.clients__link:focus {
-  fill: var(--color-accent);
-  border-color: var(--color-accent);
+
+  &:hover,
+  &:focus {
+    fill: var(--color-accent);
+    border-color: var(--color-accent);
+  }
 }
 
 .clients__item:not(:last-child) {

@@ -13,10 +13,12 @@ footer .container {
   display: inline-block;
   color: #fff;
   margin-bottom: 20px;
+
+  & span {
+    color: var(--color-accent);
+  }
 }
-.footer__logo span {
-  color: var(--color-accent);
-}
+
 /* .footer-content {
 } */
 .addressMenu__item:not(:last-child) {
@@ -27,13 +29,15 @@ footer .container {
   line-height: 24px;
   letter-spacing: 00.03em;
   transition: color 250ms var(--animation-cubic);
-}
-.addressMenu__link--grey {
-  color: rgba(255, 255, 255, 0.6);
-}
-.addressMenu__link:hover,
-.addressMenu__link:focus {
-  color: var(--color-accent);
+
+  &--grey {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
 }
 
 .footer__title {
@@ -87,12 +91,13 @@ footer .container {
   border-radius: 4px;
 
   transition: background-color 250ms var(--animation-cubic), filter 250ms var(--animation-cubic);
-}
-.subForm__button:hover,
-.subForm__button:focus,
-.subForm__button:active {
-  background-color: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
 .subForm__icon {
   width: 24px;
@@ -117,12 +122,14 @@ footer .container {
   border-radius: 4px;
   background-color: var(--color-bg-alt);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-}
-.subForm input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
 
-.subForm input:hover,
-.subForm input:focus {
-  background-color: #41424f;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #41424f;
+  }
+  // { &::placeholder {c}}
 }

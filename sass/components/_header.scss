@@ -14,10 +14,12 @@ nav {
   font-size: 26px;
   color: #000000;
   line-height: 31px;
+
+  & span {
+    color: var(--color-accent);
+  }
 }
-.nav-bar__logo span {
-  color: var(--color-accent);
-}
+
 .nav-bar__menu {
   display: flex;
   margin-left: 93px;
@@ -25,10 +27,10 @@ nav {
 
 .nav-bar__item {
   position: relative;
-}
 
-.nav-bar__item:not(:last-child) {
-  margin-right: 50px;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .nav-bar__link {
@@ -42,46 +44,47 @@ nav {
   line-height: 16px;
 
   transition: color 250ms var(--animation-cubic);
-}
-.nav-bar__link--active::before {
-  content: "";
 
-  position: absolute;
-  left: 0;
-  bottom: -1px;
+  &--active::before {
+    content: "";
 
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--color-accent);
-}
+    position: absolute;
+    left: 0;
+    bottom: -1px;
 
-.nav-bar__link::after {
-  content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--color-accent);
+  }
 
-  position: absolute;
-  left: 0;
-  bottom: -1px;
+  &::after {
+    content: "";
 
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
 
-  transform: scaleX(0);
-  transition: transform 250ms var(--animation-cubic);
-}
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--color-accent);
 
-.nav-bar__link:hover,
-.nav-bar__link:focus {
-  color: var(--color-accent);
-}
+    transform: scaleX(0);
+    transition: transform 250ms var(--animation-cubic);
+  }
 
-.nav-bar__link:hover::after,
-.nav-bar__link:focus::after {
-  transform: scaleX(1);
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+  }
 }
 
 .cont-menu {
@@ -92,16 +95,17 @@ nav {
 .cont-menu__icon {
   fill: currentColor;
   margin-right: 10px;
+
+  &--mail {
+    max-width: 16px;
+    max-height: 12px;
+  }
+  &--phone {
+    max-width: 10px;
+    max-height: 16px;
+  }
 }
 
-.cont-menu__icon--mail {
-  max-width: 16px;
-  max-height: 12px;
-}
-.cont-menu__icon--phone {
-  max-width: 10px;
-  max-height: 16px;
-}
 .cont-menu__item:not(:last-child) {
   margin-right: 30px;
 }
@@ -115,8 +119,9 @@ nav {
   line-height: 16px;
 
   transition: color 250ms var(--animation-cubic);
-}
-.cont-menu__link:hover,
-.cont-menu__link:focus {
-  color: var(--color-accent);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
 }
